@@ -1,0 +1,25 @@
+Book dc = new Book("Divina Commedia", "poema");
+			Book vn = new Book("La Vita Nuova", "prosimetro");
+			List<Book> lst = new ArrayList<Book>();
+			Author dante = new Author("Dante", "Alighieri");
+			dc.setAuthor(dante);
+			vn.setAuthor(dante);
+			lst.add(dc);
+			lst.add(vn);
+			dante.setLibri(lst);
+			authRepo.save(dante);
+			bookRepo.save(dc);
+			bookRepo.save(vn);
+
+			Book ps = new Book("Promessi Sposi", "romanzo storico");
+			Book cm = new Book("il 5 Maggio", "poesia");
+			List<Book> l = new ArrayList<Book>();
+			Author manzoni = new Author("Alessandro", "Manzoni");
+			ps.setAuthor(manzoni);
+			cm.setAuthor(manzoni);
+			lst.add(ps);
+			lst.add(cm);
+			manzoni.setLibri(l);
+			authRepo.save(manzoni);
+			bookRepo.save(ps);
+			bookRepo.save(cm);
